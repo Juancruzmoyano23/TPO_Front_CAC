@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #E5E5E5;
+    --primary-color: #F1DBDA;
+    --secundary-color: #FC;
+    --third-color: #002379;
+}
+
