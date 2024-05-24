@@ -103,13 +103,109 @@ main {
     height: 15rem;
 }
 
-#desccarrusel{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    font-size: 25px;
+
+
+.footer {
+    line-height: 1.6em;
+    display: flex;
+    justify-content: space-between; /* Distribuir uniformemente las columnas */
+    background-color:#252932;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;}
+
+
+
+
+
+ .parrafo1 {
+    
+    line-height: 20px;
+     margin: 0 239px 15px;
+     text-decoration: none;
+     font-size: 16px;
+    color: #969ca5;
+    padding-top: 5px;
+    padding-bottom: 5px
+    
+ }
+
+ .parrafo2{
+    line-height: 20px;
+     margin: 0 10px 15px;
+     text-decoration: none;
+     font-size: 16px;
+    color: #969ca5;
+    padding-top: 5px;
+    padding-bottom: 5px
+ }
+
+
+.footer-column ul {
+    margin-left: 240px;
+    list-style-type: none;
+    padding: 0;
+    
 }
 
-#espacioboxes{
-    padding-left: 2rem;
-    padding-right: 2rem;
+
+
+.columna2{
+    list-style-type: none;
+    padding: 0;
+    margin-left: 50px;
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    
+
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+i{
+    text-align: center;
+    font-size: 30px;
+    margin: 10px;
+    border-radius: 40%;
+    padding: 7px;
+    box-shadow: 0px 5px 10px #292525;
+    transition: 0.3s ease;
+}
+
+.fa-facebook:hover{
+    background-color: rgb(60, 79, 245);
+
+}
+
+.fa-instagram:hover{
+    background-color: rgb(230, 56, 143);
+    
+
+}
+.fa-youtube:hover{
+    background-color: rgb(255, 0, 0);
+    
+
+}
+.fa-twitter:hover{
+    background-color: rgb(65, 180, 233);
+    
+
 }
