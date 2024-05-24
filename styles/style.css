@@ -1,6 +1,10 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -74,8 +78,10 @@
 
 
 /*MAIN*/
-main{
+
+main {
     display: flex;
+    background-color: var(--color2);
 }
 
 .dispflex{
@@ -95,4 +101,15 @@ main{
 .tamañoimagen{
     width: 23rem;
     height: 15rem;
+}
+
+#desccarrusel{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 25px;
+}
+
+#espacioboxes{
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
