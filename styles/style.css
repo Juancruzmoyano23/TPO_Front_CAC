@@ -80,7 +80,6 @@
 /*MAIN*/
 main{
     background-color: var(--color2);
-    display: flex;
 }
 
 .dispflex{
