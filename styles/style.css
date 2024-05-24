@@ -1,117 +1,105 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
+
 
 :root {
-    --bg-color: #E5E5E5;
-    --primary-color: #F1DBDA;
-    --secundary-color: #FC;
-    --third-color: #002379;
+    --color1: #E5E5E5;
+    --color2: #F1DBDA;
+    --color3: #fcd0cf;
+    --color4: #cfbdbf;
+    --color5: #a2a9af;
 }
 
+/*HEADER*/
 
-.footer {
-    line-height: 1.6em;
-    display: flex;
-    justify-content: space-between; /* Distribuir uniformemente las columnas */
-    background-color:#252932;
-    color: #fff;
+.header {
+    background-color: var(--color3);
+    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 20px;
-    box-sizing: border-box;}
+}
 
-
-
-
-
- .parrafo1 {
-    
-    line-height: 20px;
-     margin: 0 239px 15px;
-     text-decoration: none;
-     font-size: 16px;
-    color: #969ca5;
-    padding-top: 5px;
-    padding-bottom: 5px
-    
- }
-
- .parrafo2{
-    line-height: 20px;
-     margin: 0 10px 15px;
-     text-decoration: none;
-     font-size: 16px;
-    color: #969ca5;
-    padding-top: 5px;
-    padding-bottom: 5px
- }
-
-
-.footer-column ul {
-    margin-left: 240px;
-    list-style-type: none;
-    padding: 0;
-    
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
 }
 
 
-
-.columna2{
-    list-style-type: none;
-    padding: 0;
-    margin-left: 50px;
+#logo a img {
+    width: 80px;
+    border-radius: 300px;
+    border: solid 2px #222;
 }
 
-.footer-column a {
-    color: #ffffff;
+
+.search {
+    border-radius: 40px;
+    border: solid .5px #bb9c9c;
+    width: 950px;
+    height: 42px;
+}
+
+.search:hover {
+    border: solid .5px #222;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 50px;  
+    font-size: 26px;
+}
+
+.nav-links-a {
     text-decoration: none;
-    
-
+    font-weight: bold;
+    text-align: end;
+    color: #222;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
-.footer-column a:hover {
-    text-decoration: underline;
+.nav-links a:hover {
+    color: white;
+}*/
 
+
+
+/*MAIN*/
+
+main {
+    display: flex;
+    background-color: var(--color2);
 }
 
-
-
-
-
-
-
-
-
-
-
-i{
+.dispflex{
+    display: flex;
+    justify-content: center;
     text-align: center;
-    font-size: 30px;
-    margin: 10px;
-    border-radius: 40%;
-    padding: 7px;
-    box-shadow: 0px 5px 10px #292525;
-    transition: 0.3s ease;
 }
 
-.fa-facebook:hover{
-    background-color: rgb(60, 79, 245);
-
+#imagenesrecetas{
+    justify-content: space-between;
 }
 
-.fa-instagram:hover{
-    background-color: rgb(230, 56, 143);
-    
-
+.sectionbodyhome{
+    background-color: var(--color2);
 }
-.fa-youtube:hover{
-    background-color: rgb(255, 0, 0);
-    
 
+.tamañoimagen{
+    width: 23rem;
+    height: 15rem;
 }
-.fa-twitter:hover{
-    background-color: rgb(65, 180, 233);
-    
 
-}
