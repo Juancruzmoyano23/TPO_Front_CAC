@@ -4,9 +4,10 @@
 }
 
 :root {
-    --bg-color: #E5E5E5;
-    --primary-color: #F1DBDA;
-    --secundary-color: #FC;
-    --third-color: #002379;
+    --color1: #E5E5E5;
+    --color2: #F1DBDA;
+    --color3: #fcd0cf;
+    --color4: #cfbdbf;
+    --color5: #a2a9af;
 }
 
