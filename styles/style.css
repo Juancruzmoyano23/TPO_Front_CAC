@@ -74,6 +74,10 @@
 
 
 /*MAIN*/
+main{
+    display: flex;
+}
+
 .dispflex{
     display: flex;
     justify-content: center;
