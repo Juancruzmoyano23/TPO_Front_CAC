@@ -11,3 +11,63 @@
     --color5: #a2a9af;
 }
 
+/*HEADER*/
+
+.header {
+    background-color: var(--color1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo a img {
+    width: 80px;
+}
+
+
+/*.header {
+    background-color: var(--third-color);
+    position: sticky;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 99;
+}
+
+.header nav {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    padding: 0 20px;
+}
+
+#logo, #logo a {
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}*/
