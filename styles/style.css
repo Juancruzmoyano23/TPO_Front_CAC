@@ -73,13 +73,13 @@
 
 .nav-links a:hover {
     color: white;
-}*/
+}
 
 
 
 /*MAIN*/
 main{
-    background-color: var(--color1);
+    background-color: var(--color2);
     display: flex;
 }
 
