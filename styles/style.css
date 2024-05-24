@@ -71,3 +71,25 @@
 .nav-links a:hover {
     color: var(--secondary-color);
 }*/
+
+
+
+/*MAIN*/
+.dispflex{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#imagenesrecetas{
+    justify-content: space-between;
+}
+
+.sectionbodyhome{
+    background-color: var(--color2);
+}
+
+.tamañoimagen{
+    width: 23rem;
+    height: 15rem;
+}
