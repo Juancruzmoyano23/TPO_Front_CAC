@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 :root {
     --color1: #E5E5E5;
     --color2: #F1DBDA;
@@ -14,8 +15,8 @@
 /*HEADER*/
 
 .header {
-    background-color: var(--color1);
-    position: sticky;
+    background-color: var(--color3);
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
@@ -25,51 +26,49 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 40px;
 }
+
 
 #logo a img {
     width: 80px;
+    border-radius: 300px;
+    border: solid 2px #222;
 }
 
 
-/*.header {
-    background-color: var(--third-color);
-    position: sticky;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    z-index: 99;
+.search {
+    border-radius: 40px;
+    border: solid .5px #bb9c9c;
+    width: 950px;
+    height: 42px;
 }
 
-.header nav {
-    display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-
-    height: 60px;
-    padding: 0 20px;
+.search:hover {
+    border: solid .5px #222;
 }
 
-#logo, #logo a {
-    font-weight: bold;
-    color: white;
-}
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 50px;  
+    font-size: 26px;
 }
 
-.nav-links a {
-    color: white;
+.nav-links-a {
+    text-decoration: none;
+    font-weight: bold;
+    text-align: end;
+    color: #222;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 
 .nav-links a:hover {
-    color: var(--secondary-color);
+    color: white;
 }*/
 
 
