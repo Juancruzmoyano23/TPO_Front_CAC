@@ -76,7 +76,6 @@
     text-decoration: none;
 }
 
-
 /*MAIN*/
 
 .mainflex {
@@ -108,14 +107,14 @@
     border-bottom:2px solid #333;
 }
 
-.tamaÃ±oimagen {
+.tamañoimagen {
     width: 23rem;
     height: 15rem;
 }
 
 .container {
     width: 23rem; 
-    height: 15rem;    
+    height: 15rem;
     overflow: hidden; 
     position: relative;
     text-align: center;
