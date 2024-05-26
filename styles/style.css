@@ -79,7 +79,7 @@
 
 /*MAIN*/
 
-main {
+.mainflex {
     display: flex;
     background-color: var(--color2);
 }
@@ -90,25 +90,36 @@ main {
     text-align: center;
 }
 
+.imgmaincarrusel img { 
+    border-radius: 8px;
+    filter: drop-shadow(8px 8px 4px #333);
+}
+
 .imagenesrecetas{
     justify-content: space-between;
 }
 
 .sectionbodyhome{
-    background-color: #cec5ce;
+    background-color: var(--color1);
+    border-radius: 15px;
 }
 
-.tamañoimagen{
+.lineaseparadora {
+    border-bottom:2px solid #333;
+}
+
+.tamaÃ±oimagen {
     width: 23rem;
     height: 15rem;
 }
 
-.container{
+.container {
     width: 23rem; 
     height: 15rem;    
     overflow: hidden; 
     position: relative;
     text-align: center;
+    filter: drop-shadow(8px 8px 4px #333);
 }
 
 .imagen-zoom-interno {
@@ -171,6 +182,20 @@ main {
 
 #espacioboxes{
     padding: 0rem 2rem 2rem 2rem;
+}
+
+.posicioniframe{
+    width: 60%;
+    align-self: center;
+}
+
+.principal {
+    padding: 3em;
+    max-width: 1400px; 
+    margin: 0 auto; 
+    background-color: #fff;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 /*FOOTER*/
