@@ -38,6 +38,8 @@
     width: 80px;
     border-radius: 300px;
     border: solid 2px #222;
+    display: flex;
+    justify-content: left;
 }
 
 
@@ -76,11 +78,9 @@
     text-decoration: none;
 }
 
-
 /*MAIN*/
 
 .mainflex {
-    display: flex;
     background-color: var(--color2);
 }
 
@@ -108,14 +108,14 @@
     border-bottom:2px solid #333;
 }
 
-.tamaÃ±oimagen {
+.tamañoimagen {
     width: 23rem;
     height: 15rem;
 }
 
 .container {
     width: 23rem; 
-    height: 15rem;    
+    height: 15rem;
     overflow: hidden; 
     position: relative;
     text-align: center;
@@ -167,7 +167,7 @@
     opacity: 1;
 }
 
-#desccarrusel{
+.desccarrusel{
     padding-top: 3rem;
     padding-bottom: 3rem;
     font-size: 25px;
@@ -180,7 +180,7 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
 }
 
-#espacioboxes{
+.espacioboxes{
     padding: 0rem 2rem 2rem 2rem;
 }
 
@@ -236,6 +236,9 @@
     margin-bottom: 10px;
 }
 
+.img-carrusel {
+    width: 100%;
+}
 
 
 i{

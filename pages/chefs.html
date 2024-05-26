@@ -9,27 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/5092825d72.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Chefs y Tips</title>
 </head>
 <body>
     <header class="header">
-        <nav>
-            <div id="logo">
-                <a href="./index.html"><img src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt=""></a>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div id="logo">
+                    <a href="/index.html"><img src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt=""></a>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="/index.html">Home</a></li>
+                  <li><a href="/pages/soporte.html">Soporte</a></li>
+                  <li><a href="/pages/chefs.html">Chef y Tips</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/pages/register.html"><span class="glyphicon glyphicon-log-in"></span> Registrate</a></li>
+                </ul>
+              </div>
             </div>
-            <input type="text" placeholder="   Buscar..." class="search">
-            <ul class="nav-links">
-                <li><a href="/index.html" class="nav-links-a">Home</a></li>
-                <li><a href="/pages/register.html" class="nav-links-a">Registro</a></li>
-                <li><a href="/pages/chefs.html" class="nav-links-a">Chef y Tips</a></li>
-                <li><a href="/pages/soporte.html" class="nav-links-a">Soporte</a></li>
-            </ul>
-        </nav>
+          </nav>
     </header>
-    <main class="principal">
+    <main class="principal2">
         <div class="tips-container">
-            <h1>Tips</h1>
-            <h2>Consejos y Trucos de Cocina</h2>
+            <div class="mqdiv">
+                <p class="p1">Tips</p>
+            </div>
+                <h2>Consejos y Trucos de Cocina</h2>
             <p>Bienvenido a nuestra sección de tips, donde compartimos los mejores consejos y trucos para ayudarte a mejorar tus habilidades culinarias. Desde técnicas básicas hasta secretos de chefs profesionales, aquí encontrarás todo lo que necesitas para llevar tus recetas al siguiente nivel.</p>
             <h2>Últimos Tips</h2>
             <div class="tip-details">
