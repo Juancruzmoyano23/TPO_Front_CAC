@@ -10,69 +10,85 @@
     <script src="https://kit.fontawesome.com/5092825d72.js" crossorigin="anonymous"></script>
     <!--Font-->
     <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/styles/style.js">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header class="header">
-        <nav>
-            <div id="logo">
-                <a href="./index.html"><img src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt=""></a>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <div id="logo">
+                    <a href="/index.html"><img src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt=""></a>
+                </div>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="/index.html">Home</a></li>
+                  <li><a href="/pages/soporte.html">Soporte</a></li>
+                  <li><a href="/pages/chefs.html">Chef y Tips</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="/pages/register.html"><span class="glyphicon glyphicon-log-in"></span> Registrate</a></li>
+                </ul>
+              </div>
             </div>
-            <input type="text" placeholder="   Buscar..." class="search">
-            <ul class="nav-links">
-                <li><a href="/index.html" class="nav-links-a">Home</a></li>
-                <li><a href="/pages/register.html" class="nav-links-a">Registro</a></li>
-                <li><a href="/pages/chefs.html" class="nav-links-a">Chef y Tips</a></li>
-                <li><a href="/pages/soporte.html" class="nav-links-a">Soporte</a></li>
-            </ul>
-        </nav>
+          </nav>
     </header>
     <main class="main-register">
         <br>
         <section class="section_form">
-            <form action="/Clase_04/register.html" method="post">
+            <form action="/Clase_04/register.html" method="post" id="form">
                 <div class="box-img">
                     <img class="img-form" src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt="">
                 </div>
                     <h2 class="legend">Ingresa tus datos personales</h2>
                     <div>
                         <label class="text_derecha" for="firstname">Nombre:</label><br>
-                        <input class="ip" type="text" name="firstname" id="firstname" placeholder="Nicolas...">
+                        <input required class="ip" type="text" name="firstname" id="firstname" placeholder="Nicolas...">
                     </div>
                     <br>
                     <div>
                         <label class="text_derecha" for="lastname">Apellido:</label>
-                        <input class="ip" type="text" name="lastname" id="lastname" placeholder="Perez...">
+                        <input required class="ip" type="text" name="lastname" id="lastname" placeholder="Perez...">
                     </div>
                     <br>        
                     <div>
                         <label class="text_derecha" for="dire">Dirección:</label>
-                        <input class="ip" type="text" name="dire" id="dire">
+                        <input required class="ip" type="text" name="dire" id="dire">
                     </div>
                     <br>
                     <div>
                         <label class="text_derecha" for="dire">Email:</label>
-                        <input class="ip" type="email" name="email" id="email" placeholder="nombreapellido@email.com">
+                        <input required class="ip" type="email" name="email" id="email" placeholder="nombreapellido@email.com">
                     </div>
                     <br>
                     <div>
                         <label class="text_derecha" for="ubi">Ciudad:</label>
-                        <input class="ip" type="text" name="ubi" id="ubi">
+                        <input required class="ip" type="text" name="ubi" id="ubi">
                     </div>
                     <br>
                     <div>
                         <label class="text_derecha" for="code">Código Postal:</label>
-                        <input class="ip" type="number" name="code" id="code" max="9999" min="1">
+                        <input required class="ip" type="number" name="code" id="code" max="9999" min="1">
                     </div>
                     <br>
                     <div>
                         <label class="text_derecha" for="nacimiento">Fecha de Nacimiento:</label>
-                        <input class="ip" type="date" name="nacimiento" id="nacimiento">
+                        <input required class="ip" type="date" name="nacimiento" id="nacimiento">
                     </div>
                     <p class="text_derecha"> Género: <br><br>
-                        <input class="option" type="radio" name="gender" value="hombre" checked> Hombre
-                        <input class="option" type="radio" name="gender" value="mujer"> Mujer
-                        <input class="option" type="radio" name="gender" value="indefined"> No indefinido
+                        <input required class="option" type="radio" name="gender" value="hombre" checked> Hombre
+                        <input required class="option" type="radio" name="gender" value="mujer"> Mujer
+                        <input required class="option" type="radio" name="gender" value="indefined"> No indefinido
                     </p>
                     <br>
                     <p class="text_derecha"> Estudios: <br><br>
@@ -87,6 +103,7 @@
                         <input class="enviar" type="submit" value="Enviar">
                     </div>
                     <p class="p">Al enviar el formulario, la información sera enviada a la pagina "show_data.html"</p>
+                    <p id="alerta"></p>
             </form>
         </section>
     </main>
