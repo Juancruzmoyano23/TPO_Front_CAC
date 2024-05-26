@@ -80,7 +80,6 @@
 /*MAIN*/
 
 main {
-    display: flex;
     background-color: var(--color2);
 }
 
@@ -174,7 +173,6 @@ main {
 }
 
 /*FOOTER*/
-
 .footer {
     display: flex;
     justify-content: space-between;
@@ -212,9 +210,11 @@ main {
     margin-bottom: 10px;
 }
 
+
+
 i{
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
     margin: 10px;
     border-radius: 40%;
     padding: 7px;
