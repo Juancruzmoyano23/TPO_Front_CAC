@@ -34,7 +34,7 @@
 
 .h2_form {
     text-align: center;
-    font-size: 3vh;
+    font-size: 1vh;
     color: #222;
 }
 
@@ -43,7 +43,7 @@
     padding: 7px;
     color: #222;
     font-size: 2vh;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 .ip {
@@ -89,7 +89,7 @@
 }
 
 .img-form {
-    width: 5rem;
+    width: 100px;
     margin: auto;
     border-radius: 5rem;
     border: solid 2px #222;
