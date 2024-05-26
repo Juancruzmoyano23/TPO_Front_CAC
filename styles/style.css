@@ -90,12 +90,12 @@ main {
     text-align: center;
 }
 
-#imagenesrecetas{
+.imagenesrecetas{
     justify-content: space-between;
 }
 
 .sectionbodyhome{
-    background-color: var(--color2);
+    background-color: #cec5ce;
 }
 
 .tamañoimagen{
@@ -103,7 +103,77 @@ main {
     height: 15rem;
 }
 
+.container{
+    width: 23rem; 
+    height: 15rem;    
+    overflow: hidden; 
+    position: relative;
+    text-align: center;
+}
 
+.imagen-zoom-interno {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.658);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.textocentral{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.container:hover .imagen-zoom-interno {
+    transform: scale(1.3);
+    opacity: 0.8;
+}
+
+.container:hover::after{
+    opacity: 1;
+}
+
+.container:hover .textocentral{
+    opacity: 1;
+}
+
+#desccarrusel{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 25px;
+}
+
+#desccarrusel2{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+#espacioboxes{
+    padding: 0rem 2rem 2rem 2rem;
+}
+
+/*FOOTER*/
 
 .footer {
     line-height: 1.6em;
