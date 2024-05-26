@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Teachers", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+:root {
+    --color1: #E5E5E5;
+    --color2: #F1DBDA;
+    --color3: #fcd0cf;
+    --color4: #cfbdbf;
+    --color5: #a2a9af;
+}
+
+.main-register {
+    background-color: white;
+}
+
+.section_form {
+    background-color: var(--color1);
+    border-radius: 1.5vh;
+    width: 60%;
+    position: relative;
+    right: -20%;
+    padding-top: 2vh;
+    height: 80%;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.h2_form {
+    text-align: center;
+    font-size: 3vh;
+    color: #222;
+}
+
+.legend {
+    text-align: center;
+    padding: 7px;
+    color: #222;
+    font-size: 2vh;
+    font-size: 1rem;
+}
+
+.ip {
+    width: 96%;
+    padding: 1vh;
+    margin: 1vh;
+    display: inline-block;
+    border: 1vh;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.text_derecha {
+    padding-left: 1vh;
+    font-size: 17px;
+}
+
+.option {
+    margin: 5px;
+}
+
+.p {
+    font-size: 1.6vh;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.enviar {
+    background-color: var(--color2);
+    color: #222;
+    border-radius: .8vh;
+    width: 10%;
+    padding: 4px;
+    margin: 15px;
+    font-size: 1.5vh;
+    cursor: pointer;
+}
+
+.box-img {
+    display: flex;
+    justify-content: center;
+}
+
+.img-form {
+    width: 5rem;
+    margin: auto;
+    border-radius: 5rem;
+    border: solid 2px #222;
+}
