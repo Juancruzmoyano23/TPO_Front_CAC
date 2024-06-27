@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  TPO13_postgres:
+    image: postgres:16-alpine
+    container_name: TPO13_postgres
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - TPO13_postgres:/var/lib/postgresql/data
+
+
+  TPO13_pgadmin:
+    image: dpage/pgadmin4
+    container_name: TPO13_pgadmin
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: Chefs123@admin.com
+      PGADMIN_DEFAULT_PASSWORD: Chefs123
+    volumes:
+      - TPOO13_pgadmin:/var/lib/pgadmin
+    depends_on:
+      - TPO13_postgres
+
+
+networks:
+  default:
+    name: TPO13_sql
+
+
+volumes:
+  TPO13_postgres:
+  TPOO13_pgadmin:
