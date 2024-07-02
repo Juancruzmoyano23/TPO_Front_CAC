@@ -12,6 +12,16 @@ services:
     volumes:
       - TPO13_postgres:/var/lib/postgresql/data
 
+  # cac_mysql:
+  #   image: mysql:5.7
+  #   container_name: cac_mysql
+  #   ports:
+  #     - 13306:3306
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: password
+  #     MYSQL_DATABASE: database
+  #   # volumes:
+  #   #   - cac_mysql:/var/lib/mysql
 
   TPO13_pgadmin:
     image: dpage/pgadmin4
@@ -26,6 +36,13 @@ services:
     depends_on:
       - TPO13_postgres
 
+  # cac_adminer:
+  #   image: adminer
+  #   container_name: cac_adminer
+  #   ports:
+  #     - 18080:8080
+  #   depends_on:
+  #     - cac_mysql
 
 networks:
   default:
