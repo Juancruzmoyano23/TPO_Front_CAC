@@ -9,36 +9,36 @@ def get_connection():
     return connect(
         host="localhost",
         port=15432,
-        database="cac_app",
+        database="TPO13_cac",
         user="cac_app",
-        password="password",
+        password="chefs123",
     )
 
 
-@app.get("/api/movies")
-def get_movies():
+@app.get("/api/recetas")
+def get_recetas():
 
-    # conectar a la bbdd
+    # conectar a la database
     conn = get_connection()
-    # crear un cursor -- se encarga de ejecutar las queries
+    # crear un cursor -- se encarga de ejecutar las queries (selects)
     cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
 
     # ejecutar la query para obtener registros
-    cursor.execute("SELECT * FROM movies")
-    movies = cursor.fetchall()
+    cursor.execute("SELECT * FROM recetas")
+    recetas = cursor.fetchall()
 
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
 
     # retornar los resultados
-    return jsonify(movies)
+    return jsonify(recetas)
 
 
-@app.post("/api/movies")
-def create_movie():
+@app.post("/api/recetas")
+def create_receta():
 
-    movie_data = request.get_json()
+    receta_data = request.get_json()
 
     # conectar a la bbdd
     conn = get_connection()
@@ -47,37 +47,36 @@ def create_movie():
 
     # ejecutar la query para obtener registros
     query = """
-    INSERT INTO movies (author_id, description, language, name, rating, release_date)
+    INSERT INTO recetas (receta_id, name, description, ingredient, rating)
     VALUES (%s, %s, %s, %s, %s, %s)
     RETURNING *
     """
     cursor.execute(
         query=query,
         vars=(
-            movie_data["author_id"],
-            movie_data["description"],
-            movie_data["language"],
-            movie_data["name"],
-            movie_data["rating"],
-            movie_data["release_date"],
+            receta_data["receta_id"],
+            receta_data["name"],
+            receta_data["description"],
+            receta_data["ingredient"],
+            receta_data["rating"],
         ),
     )
-    movie = cursor.fetchone()
+    receta = cursor.fetchone()
     conn.commit()
     
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
 
-    if movie is None:
-        return jsonify({"message": "Movie not created"}), 400
+    if receta is None:
+        return jsonify({"message": "receta not created"}), 400
 
     # retornar los resultados
-    return jsonify(movie), 201
+    return jsonify(receta), 201
 
 
-@app.get("/api/movies/<movie_id>")
-def get_movie(movie_id):
+@app.get("/api/recetas/<receta_id>")
+def get_receta(receta_id):
     # conectar a la bbdd
     conn = get_connection()
     # crear un cursor -- se encarga de ejecutar las queries
@@ -85,18 +84,18 @@ def get_movie(movie_id):
 
     # ejecutar la query para obtener registros
     cursor.execute(
-        query="SELECT * FROM movies WHERE movie_id = %s", vars=(movie_id,)
-    )
-    movie = cursor.fetchone()
+        query="SELECT * FROM recetas WHERE receta_id = %s", vars=(receta_id,)
+    )   
+    receta = cursor.fetchone()
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
     
-    if movie is None:
-        return jsonify({"message": "Movie not found"}), 404
+    if receta is None:
+        return jsonify({"message": "Receta not found"}), 404
 
     # retornar los resultados
-    return jsonify(movie)
+    return jsonify(receta)
 
 
 @app.delete("/api/movies/<movie_id>")
@@ -113,11 +112,6 @@ def update_movie(movie_id):
 @app.put("/api/movies/<movie_id>")
 def update_movie_put(movie_id):
     return {"title": "Spiderman 2", "year": 2002, "id": movie_id}
-
-@app.get("/")
-def home(cursor):
-    return "Hello, World!"
-    
 
 
 if __name__ == "__main__":
