@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--css-->
-    <link rel="stylesheet" href="/styles/register.css">
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="static/styles/register.css">
+    <link rel="stylesheet" href="static/styles/style.css">
     <!--icon-->
     <script src="https://kit.fontawesome.com/5092825d72.js" crossorigin="anonymous"></script>
     <!--Font-->
     <link href="https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/styles/style.js">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -27,17 +26,17 @@
                   <span class="icon-bar"></span>
                 </button>
                 <div id="logo">
-                    <a href="/index.html"><img src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt=""></a>
+                    <a href="/"><img src="static/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt=""></a>
                 </div>
               </div>
               <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="/index.html">Home</a></li>
-                  <li><a href="/pages/soporte.html">Soporte</a></li>
-                  <li><a href="/pages/chefs.html">Chef y Tips</a></li>
+                  <li class="active"><a href="/">Home</a></li>
+                  <li><a href="/soporte">Soporte</a></li>
+                  <li><a href="/chefs">Chef y Tips</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/pages/register.html"><span class="glyphicon glyphicon-log-in"></span> Registrate</a></li>
+                  <li><a href="/register"><span class="glyphicon glyphicon-log-in"></span> Registrate</a></li>
                 </ul>
               </div>
             </div>
@@ -46,9 +45,9 @@
     <main class="main-register">
         <br>
         <section class="section_form">
-            <form action="/Clase_04/register.html" method="post" id="form">
+            <form action="#" method="post" id="form">
                 <div class="box-img">
-                    <img class="img-form" src="/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt="">
+                    <img class="img-form" src="static/Source/24-249089_gorro-de-chef-png-sombrero-de-chef-dibujo.webp" alt="">
                 </div>
                     <h2 class="legend">Ingresa tus datos personales</h2>
                     <div>
@@ -67,7 +66,7 @@
                     </div>
                     <br>
                     <div>
-                        <label class="text_derecha" for="dire">Email:</label>
+                        <label class="text_derecha" for="email">Email:</label>
                         <input required class="ip" type="email" name="email" id="email" placeholder="nombreapellido@email.com">
                     </div>
                     <br>
@@ -88,7 +87,7 @@
                     <p class="text_derecha"> Género: <br><br>
                         <input required class="option" type="radio" name="gender" value="hombre" checked> Hombre
                         <input required class="option" type="radio" name="gender" value="mujer"> Mujer
-                        <input required class="option" type="radio" name="gender" value="indefined"> No indefinido
+                        <input required class="option" type="radio" name="gender" value="indefined"> No Definido
                     </p>
                     <br>
                     <p class="text_derecha"> Estudios: <br><br>
@@ -102,7 +101,7 @@
                     <div class="box-img">
                         <input class="enviar" type="submit" value="Enviar">
                     </div>
-                    <p class="p">Al enviar el formulario, la información sera enviada a la pagina "show_data.html"</p>
+                    <p class="p">Al enviar el formulario, la información sera enviada a la base de datos correctamente"</p>
                     <p id="alerta"></p>
             </form>
         </section>
@@ -112,11 +111,10 @@
             <p class="parrafo1">Navegación</p>
             <ul>
                 <!--href colocar los links (alternativa para ingresar a las otras secciones)-->
-                <li><a href="" title="link 1">Home</a></li>
-                <li><a href="" title="link 2">Registro</a></li>
-                <li><a href="" title="link 3">Chef y Tips</a></li>
-                <li><a href="/pages/support.html" title="link 4">Soporte</a></li>
-                <li><a href="" title="link 5">Secciones</a></li>
+                <li><a href="/" title="link 1">Home</a></li>
+                <li><a href="/register" title="link 2">Registro</a></li>
+                <li><a href="/chefs" title="link 3">Chef y Tips</a></li>
+                <li><a href="/soporte" title="link 4">Soporte</a></li>
             </ul>
         </div>
         <div class="footer-column">
@@ -140,5 +138,6 @@
             </ul>
         </div>
     </footer>
+    <script src="static/js/main.js"></script>
 </body>
 </html>

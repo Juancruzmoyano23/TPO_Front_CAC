@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from psycopg2 import connect, extras
 
 
@@ -11,9 +11,8 @@ def get_connection():
         port=15432,
         database="TPO13_cac",
         user="cac_app",
-        password="chefs123",
+        password="Chefs123",
     )
-
 
 @app.get("/api/recetas")
 def get_recetas():
@@ -47,18 +46,18 @@ def create_receta():
 
     # ejecutar la query para obtener registros
     query = """
-    INSERT INTO recetas (receta_id, name, description, ingredient, rating)
-    VALUES (%s, %s, %s, %s, %s, %s)
+    insert into recetas (name, description, ingredient, rating, receta_id)
+    VALUES (%s, %s, %s, %s, %s)
     RETURNING *
     """
     cursor.execute(
         query=query,
         vars=(
-            receta_data["receta_id"],
             receta_data["name"],
             receta_data["description"],
             receta_data["ingredient"],
             receta_data["rating"],
+            receta_data["receta_id"],
         ),
     )
     receta = cursor.fetchone()
@@ -98,9 +97,27 @@ def get_receta(receta_id):
     return jsonify(receta)
 
 
-@app.delete("/api/movies/<movie_id>")
-def delete_movie(movie_id):
-    return {"title": "Spiderman 2", "year": 2002, "id": movie_id}
+@app.delete("/api/recetas/<receta_id>")
+def delete_receta(receta_id):
+    conn = get_connection()
+    # crear un cursor -- se encarga de ejecutar las queries
+    cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
+
+    # ejecutar la query para obtener registros
+    cursor.execute(
+        query="DELETE FROM recetas WHERE receta_id = %s RETURNING *", vars=(receta_id,)
+    )   
+    receta = cursor.fetchone()
+    conn.commit()
+    # cerrar el cursor y la conexión
+    cursor.close()
+    conn.close()
+    
+    if receta is None:
+        return jsonify({"message": "Receta not found"}), 404
+
+    # retornar los resultados
+    return jsonify(receta)
 
 
 # PUT / PATCH
@@ -112,6 +129,22 @@ def update_movie(movie_id):
 @app.put("/api/movies/<movie_id>")
 def update_movie_put(movie_id):
     return {"title": "Spiderman 2", "year": 2002, "id": movie_id}
+
+@app.get("/")
+def home():
+    return send_file("static/index.html")
+
+@app.get("/soporte")
+def soporte():
+    return send_file("static/pages/soporte.html")
+
+@app.get("/register")
+def register():
+    return send_file("static/pages/register.html")
+
+@app.get("/chefs")
+def chefs():
+    return send_file("static/pages/chefs.html")
 
 
 if __name__ == "__main__":

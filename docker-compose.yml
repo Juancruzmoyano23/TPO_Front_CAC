@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 
 services:
   TPO13_postgres:
@@ -36,6 +36,8 @@ services:
     depends_on:
       - TPO13_postgres
 
+
+
   # cac_adminer:
   #   image: adminer
   #   container_name: cac_adminer
@@ -44,10 +46,20 @@ services:
   #   depends_on:
   #     - cac_mysql
 
+  tpo13_backend:
+    image: tpo13_backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tpo13_backend
+    ports:
+      - 5000:5000
+    volumes:
+      - ./src:/app
+      
 networks:
   default:
-    name: TPO13_sql
-
+    name: tpo13_sql
 
 volumes:
   TPO13_postgres:

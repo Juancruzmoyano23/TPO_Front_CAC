@@ -8,3 +8,4 @@ RUN pip install -r requirements.txt
 COPY ./src /app
 
 CMD ["python", "app.py"]
+#v CMD ["gunicorn", "--config", "gconfig.py", "app:app"]
