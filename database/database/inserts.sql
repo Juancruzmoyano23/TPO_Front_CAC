@@ -16,8 +16,8 @@ values
 ('Carnes'),
 ('Pescados');
 
-insert into recetas (name, description, ingredient, rating, receta_id)
-values
+insert into recetas (name, description, ingredient, rating, country_id) 
+values 
 ('Tacos', 'lorem 1', 'carne verdura', 8.5, 1),
 ('Sushi', 'lorem 2', 'arroz salmon', 6.5, 2);
 
