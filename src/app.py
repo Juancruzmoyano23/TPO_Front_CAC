@@ -9,9 +9,9 @@ def get_connection():
     return connect(
         host="localhost",
         port=15432,
-        database="TPO13_cac",
-        user="cac_app",
-        password="Chefs123",
+        database="tpo13_backend",
+        user="postgres",
+        password="password",
     )
 
 @app.get("/api/recetas")
@@ -23,7 +23,7 @@ def get_recetas():
     cursor = conn.cursor(cursor_factory=extras.RealDictCursor)
 
     # ejecutar la query para obtener registros
-    cursor.execute("SELECT * FROM recetas")
+    cursor.execute("select * from recetas")
     recetas = cursor.fetchall()
 
     # cerrar el cursor y la conexión
@@ -31,7 +31,7 @@ def get_recetas():
     conn.close()
 
     # retornar los resultados
-    return jsonify(recetas)
+    return (recetas)
 
 
 @app.post("/api/recetas")
@@ -83,12 +83,15 @@ def get_receta(receta_id):
 
     # ejecutar la query para obtener registros
     cursor.execute(
-        query="SELECT * FROM recetas WHERE receta_id = %s", vars=(receta_id,)
+        query="SELECT * FROM recetas WHERE receta_id = %s", 
+        vars=(receta_id, )
     )   
     receta = cursor.fetchone()
     # cerrar el cursor y la conexión
     cursor.close()
     conn.close()
+
+    return jsonify(receta)
     
     if receta is None:
         return jsonify({"message": "Receta not found"}), 404

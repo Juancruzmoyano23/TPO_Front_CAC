@@ -1,20 +1,18 @@
 CREATE TABLE recetas (
-	receta_id SERIAL PRIMARY KEY,
-
-	name VARCHAR(100) NOT NULL,
-	description TEXT,
-	ingredient TEXT NOT NULL,
-	rating DECIMAL(2, 1),
-
-	country_id INTEGER,
-	FOREIGN KEY (country_id) REFERENCES countries(country_id)
+    receta_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    ingredient TEXT NOT NULL,
+    rating DECIMAL(2, 1),
+    country_id INTEGER,
+    FOREIGN KEY (country_id) REFERENCES countries(country_id)
 );
 
 CREATE TABLE countries (
-	country_id SERIAL PRIMARY KEY,
-	name VARCHAR(50),
-	city VARCHAR(50),
-	year INT
+    country_id SERIAL PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(50),
+    year INT
 );
 
 create table if not exists characters (
